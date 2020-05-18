@@ -30,9 +30,12 @@ public class EnterpriseController {
 	@Autowired
 	private EnterpriseService enterpriseService;
 
+    /**
+     * 热门企业
+     * @return
+     */
     @RequestMapping("/search/hotlist")
     public Result hotList(){
-
         return new Result(true,StatusCode.OK,"查询成功",enterpriseService.hotList());
     }
 	
